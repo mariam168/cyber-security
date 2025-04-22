@@ -1,0 +1,14 @@
+.perspective-3d {
+    perspective: 1000px;
+  }
+  
+  .polygon-shadow {
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.4)); /* ✅ ظلال ثلاثية الأبعاد */
+    transform: rotateX(10deg) rotateY(10deg) scale(1.05); /* ✅ إمالة الشكل لمحاكاة 3D */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .polygon-shadow:hover {
+    transform: rotateX(15deg) rotateY(15deg) scale(1.1); /* ✅ تفاعل 3D عند التحريك */
+  }
+  
