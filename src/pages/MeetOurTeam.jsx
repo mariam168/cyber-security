@@ -136,58 +136,86 @@ export default function TeamPage() {
         <>
             <Header />
 
-            <section className="relative bg-gradient-to-b from-black via-black to-gray-800 text-white py-24 px-6 text-center overflow-hidden">
-                <div className="relative z-10 max-w-6xl mx-auto flex justify-between items-center" style={{ alignItems: 'flex-start' }}>
-                    <div className="text-left flex-grow max-w-md">
-                        <div className="flex space-x-2 mb-4">
-                            <div className="w-4 h-4 bg-[#0F318E]"></div>
-                            <div className="w-4 h-4 bg-[#0F318E]"></div>
-                            <div className="w-4 h-4 bg-[#0F318E]"></div>
-                        </div>
-                        <h2 className="text-4xl font-bold mb-4">Meet the Team</h2>
-                        <p className="text-lg text-gray-300 mb-6">
-                            We pride ourselves on the family we’ve built at ITC Service. Our team of 50 staff with diverse skills comes together to form a robust IT Provider where every problem can be solved!
-                        </p>
-                        <div className="mt-8 overflow-hidden rounded-lg shadow-lg relative group">
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-50 group-hover:opacity-70 transition-all duration-700"></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="absolute inset-0 z-0">
-                    <canvas ref={canvasRef} className="w-full h-full" />
-                </div>
-            </section>
+            <section className="relative bg-gradient-to-b from-black via-black to-gray-800 text-white py-20 px-6 text-center overflow-hidden">
+      
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start md:justify-between">
+        
+        {/* Left side */}
+        <div className="text-center md:text-left flex-grow max-w-md">
+          <div className="flex justify-center md:justify-start space-x-2 mb-4">
+            <div className="w-4 h-4 bg-[#0F318E]"></div>
+            <div className="w-4 h-4 bg-[#0F318E]"></div>
+            <div className="w-4 h-4 bg-[#0F318E]"></div>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Meet the Team</h2>
+
+          <p className="text-base md:text-lg text-gray-300 mb-6">
+            We pride ourselves on the family we’ve built at ITC Service. Our team of 50 staff with diverse skills comes together to form a robust IT Provider where every problem can be solved!
+          </p>
+
+          <div className="mt-8 overflow-hidden rounded-lg shadow-lg relative group">
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-50 group-hover:opacity-70 transition-all duration-700"></div>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Canvas Background */}
+      <div className="absolute inset-0 z-0">
+        <canvas ref={canvasRef} className="w-full h-full" />
+      </div>
+
+    </section>
 
             <Team title="Our Management Team" teamMembers={teamMember} />
 
-            <section className="relative bg-black text-white py-24 px-6 text-center overflow-hidden">
-                <div className="relative z-10 max-w-6xl mx-auto flex justify-between items-center" style={{ alignItems: 'flex-start' }}>
-                    <div className="w-1/2 overflow-x-auto whitespace-nowrap" ref={scrollRef} onScroll={handleScroll}>
-                        <div className="flex mb-4" style={{ width: `${teamMembersData.length * 192}px` }}>
-                            {teamMembersData.map((member, index) => (
-                                <div key={index} className="relative w-58 h-70 overflow-hidden rounded-lg shadow-lg cursor-pointer inline-block" onClick={() => handleImageClick(member)} style={{ marginRight: '8px' }}>
-                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                                   
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="w-1/2 text-left flex-grow max-w-md">
-                        <div className="flex space-x-2 mb-4">
-                            <div className="w-4 h-4 bg-[#0F318E]"></div>
-                            <div className="w-4 h-4 bg-[#0F318E]"></div>
-                            <div className="w-4 h-4 bg-[#0F318E]"></div>
-                        </div>
-                        <h2 className="text-4xl font-bold mb-4">Meet the Team</h2>
-                        <p className="text-lg text-gray-300 mb-6">
-                            {selectedMember.name} - {selectedMember.position}
-                        </p>
-                        <div className="mt-8 overflow-hidden rounded-lg shadow-lg relative group">
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-50 group-hover:opacity-70 transition-all duration-700"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <section className="relative bg-black text-white py-20 px-6 text-center overflow-hidden">
+      
+      <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start md:justify-between space-y-10 md:space-y-0">
+        
+        {/* Text Content — ييجي فوق في الموبايل */}
+        <div className="w-full md:w-1/2 text-center md:text-left flex-grow max-w-md order-1 md:order-none">
+          <div className="flex justify-center md:justify-start space-x-2 mb-4">
+            <div className="w-4 h-4 bg-[#0F318E]"></div>
+            <div className="w-4 h-4 bg-[#0F318E]"></div>
+            <div className="w-4 h-4 bg-[#0F318E]"></div>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Meet the Team</h2>
+
+          <p className="text-base md:text-lg text-gray-300 mb-6">
+            {selectedMember.name} - {selectedMember.position}
+          </p>
+
+          <div className="mt-8 overflow-hidden rounded-lg shadow-lg relative group h-32 md:h-40">
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-50 group-hover:opacity-70 transition-all duration-700"></div>
+          </div>
+        </div>
+
+        {/* Image Slider */}
+        <div className="w-full md:w-1/2 overflow-x-auto whitespace-nowrap pb-2 order-2 md:order-none" ref={scrollRef} onScroll={handleScroll}>
+          <div className="flex mb-4 space-x-2" style={{ width: `${teamMembersData.length * 192}px` }}>
+            {teamMembersData.map((member, index) => (
+              <div
+                key={index}
+                className="relative w-48 h-60 overflow-hidden rounded-lg shadow-lg cursor-pointer inline-block"
+                onClick={() => handleImageClick(member)}
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+
+    </section>
 
             <Marquee images={logos} speed={50} />
             <Footer />
