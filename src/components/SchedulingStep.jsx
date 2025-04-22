@@ -171,10 +171,12 @@ export default function SchedulingStep({
       </div>
 
       {/* Footer */}
-      <div className="flex justify-center items-center mb-4">
-        <span className="text-sm text-gray-600 font-semibold">Step 3 of 3</span>
-      </div>
-
+      <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-600 font-semibold">Step 3 of 3</span>
+                <div className="w-1/3 h-2 bg-gray-300 rounded-full overflow-hidden">
+                  <div className="w-full h-full bg-[#0F318E] rounded-full transition-all"></div>
+                </div>
+              </div>
       <div className="flex justify-between mt-6">
         <button onClick={onPrevStep} className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600">Previous</button>
         <button

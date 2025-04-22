@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Marquee from "../components/Marquee";
-import it from "../assets/it.jfif";
+import it from "../assets/it2.jpg";
 import google from "../assets/google.jfif";
 import cyber from "../assets/cyber.jfif";
 import Northern from "../assets/Nourthern.jfif";
@@ -8,14 +8,14 @@ import Elevator from "../assets/Elevator.jfif";
 import HeroSection from "../components/HeroSection";
 import InfoSection from "../components/InfoSection";
 import mark1 from "../assets/mark1.jfif";
-import mark2 from "../assets/mark2.jfif";
+import mark2 from "../assets/mark4.jfif";
 import mark3 from "../assets/mark3.jfif";
 import mark4 from "../assets/mark4.jfif";
 import mark5 from "../assets/mark5.jfif";
 import ITSupportSection from "../components/ITSupportSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import VideoHeroSection from "../components/VideoHeroSection";
-import { FaExternalLinkAlt, FaShieldAlt, FaCloud, FaLaptop } from "react-icons/fa";
+import { FaRegLightbulb , FaNetworkWired,FaDatabase } from "react-icons/fa";
 import read1 from "../assets/read1.jfif";
 import read2 from "../assets/read2.jfif";
 import read3 from "../assets/read3.jfif";
@@ -28,40 +28,43 @@ import solution3 from "../assets/solution3.jfif";
 import Footer from "../components/Footer";
 const faqsData = [
   {
-    question: "What Is Security Scoring?",
+    question: "How does Security Scoring benefit my business?",
     answer:
-      "Microsoft security scoring is a carefully designed system that dives into your tenancy, devices, information governance and application control. Based on your tenancy setup and security settings we can give you a score. We aim to improve your score every month.",
+      "Security Scoring helps identify gaps in your IT infrastructure by evaluating policies, device compliance, and access control. It provides a measurable benchmark and helps track security improvements month-over-month.",
   },
   {
-    question: "I use Multi-Factor Authentication, is that enough?",
+    question: "Is Multi-Factor Authentication still effective in 2025?",
     answer:
-      "While Multi-Factor Authentication (MFA) significantly improves security, it should be combined with other best practices such as endpoint protection, regular security audits, and user training.",
+      "Absolutely. MFA remains a critical layer of defense, but it's most effective when combined with Zero Trust policies, identity protection, and real-time threat monitoring.",
   },
   {
-    question: "What are the biggest Cyber Security threats for SMBs right now?",
+    question: "What are common cybersecurity risks for SMEs in 2025?",
     answer:
-      "Some of the biggest cybersecurity threats for SMBs include phishing attacks, ransomware, insider threats, and weak password policies.",
+      "Phishing remains the top threat, followed by AI-driven social engineering, unsecured APIs, and supply chain vulnerabilities.",
   },
   {
-    question: "Do you offer Cyber Security training?",
+    question: "Do you provide on-site and remote cyber training?",
     answer:
-      "Yes, we offer comprehensive cybersecurity training programs for businesses to help employees recognize and mitigate potential threats.",
+      "Yes, we offer both virtual and in-person training sessions tailored to your industry. Our courses cover threat awareness, compliance, and secure remote working practices.",
   },
+];
+const solutions = [
+  { title: "Cybersecurity & Compliance", image: solution1, icon: "🛡️" },
+  { title: "Managed IT Services", image: solution2, icon: "💼" },
+  { title: "Business Continuity", image: solution3, icon: "🔄" },
+  { title: "Cloud & Remote Work", image: solution2, icon: "🌐" },
 ];
 
-const solutions = [
-  { title: "Cyber Security", image: solution1, icon: "🛡️" },
-  { title: "IT Support", image: solution2, icon: "👨‍💻" },
-  { title: "Hardware", image: solution3, icon: "🖥️" },
-  { title: "Cloud Services", image: solution2, icon: "☁️" },
-];
 const articles = [
-  { title: "Windows 10 End Of Support", image: read1, link: "#" },
-  { title: "Windows 11: The Future Of Business ", image: read2, link: "#" },
-  { title: "Merry Christmas Everyone", image: read3, link: "#" },
+  { title: "Preparing for Windows 10 End of Life: What You Need to Know", image: read1, link: "#" },
+  { title: "Migrating to Windows 11: A Guide for Modern Businesses", image: read2, link: "#" },
+  { title: "How to Build a Cyber-Resilient Workplace in 2025", image: read3, link: "#" },
 ];
+
 export default function IT() {
-  const logos = [mark1, mark2, mark3, mark4, mark5];
+  
+  const logos = [mark1, mark2, mark3, mark4, mark5 , mark1, mark2, mark3, mark4, mark5 , mark1, mark2, mark3, mark4, mark5];
+  
 
   return (
     <div>
@@ -78,12 +81,10 @@ export default function IT() {
         onButtonClick={() => console.log("Start Today button clicked!")}
       />
       <Marquee images={logos} speed={12} />
-      <InfoSection
-        title="Tailored IT Support for SMEs"
-        description="Whether you need comprehensive IT management or help with a specific technical issue, we’re here to support you. 
-        Our expert team delivers customised solutions, ensuring your business has the right technology to succeed. 
-        From resolving everyday challenges to driving long-term strategies, we provide flexible, scalable support tailored to your unique needs."
-        images={[
+      {/* <InfoSection
+      title="Strategic IT Support for Growing Businesses"
+      description="our team provides expert, tailored support designed for small and medium-sized enterprises. We work closely with you to implement smart, scalable solutions that align with your goals — ensuring your technology is always working for you, not against you."
+      images={[
           { src: cyber, alt: "Cyber Essentials Plus" },
           {
             src: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
@@ -93,18 +94,9 @@ export default function IT() {
         ]}
         mainImage={it}
         reverse={false}
-      />
-      <ITSupportSection
-        title="Flexible"
-        subtitle="IT Support"
-        description="Whether you require ongoing IT management or assistance with a specific technical challenge, we’re here to help. Our expert team provides tailored services and solutions, ensuring your business has the right technology in place to thrive."
-       
-        tabs={[
-          { name: "Managed IT", icon: <FaLaptop size={20} />, content: "Comprehensive IT solutions for growing businesses." },
-          { name: "Cybersecurity", icon: <FaShieldAlt size={20} />, content: "Protect your data and business from threats." },
-          { name: "Cloud Solutions", icon: <FaCloud size={20} />, content: "Leverage the power of cloud computing." },
-        ]}
-      />
+      /> */}
+    
+
       <TestimonialsSection
         title="Don't just take our word for it:"
         subtitle="Providing A Class Leading Service Desk Since 2006"
@@ -138,10 +130,32 @@ export default function IT() {
           ],
         }}
       />
+       <ITSupportSection
+  title="Reliable"
+  subtitle="Tech Services"
+  description="From one-time consultations to long-term partnerships, our team delivers innovative, scalable tech solutions tailored to your unique business needs."
+  tabs={[
+    {
+      name: "IT Consulting",
+      icon: <FaRegLightbulb size={20} />,
+      content: "Strategic guidance to help align your technology with business goals.",
+    },
+    {
+      name: "Network Solutions",
+      icon: <FaNetworkWired size={20} />,
+      content: "Robust networking services to keep your systems connected and efficient.",
+    },
+    {
+      name: "Data Backup",
+      icon: <FaDatabase size={20} />,
+      content: "Reliable data protection and recovery plans to secure your information.",
+    },
+  ]}
+/>
       <VideoHeroSection
-        title="IT doesn't have to"
-        subtitle="cost the earth"
-        description="ITC Service was founded with sustainability in mind. Driven by our Technical Directors vision to hit carbon neutrality by 2025."
+       title="IT That’s Powerful—Not Wasteful"
+       subtitle="Sustainable by Design"
+       description=" Service, we’re committed to building a greener future. Inspired by our Technical Director’s vision, we’re on a mission to achieve full carbon neutrality by 2025—delivering cutting-edge IT solutions with minimal environmental impact."
         videoUrl="https://www.youtube.com/embed/TCjaZXRa2No"
         imageUrl="https://cdn-icons-png.flaticon.com/512/3063/3063456.png"
         bgGradient="black"
@@ -156,8 +170,6 @@ export default function IT() {
     
       <SolutionSlider solutions={solutions} />
 
-          <div className="max-w-6xl mx-auto px-6 py-10">
-      <h2 className="text-center text-2xl font-bold mb-6">Take a read!</h2>
 
       <Carousel
         items={articles}
@@ -172,7 +184,7 @@ export default function IT() {
           </div>
         )}
       />
-    </div>
+    
     <Footer />
     </div>
   );

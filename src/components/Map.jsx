@@ -2,9 +2,9 @@ import React from "react";
 
 const OfficeLocations = () => {
   return (
-    <section className="flex flex-col md:flex-row items-stretch max-w-6xl mx-auto my-12 bg-white shadow-lg rounded-lg overflow-hidden">
+    <section className="flex  flex-col md:flex-row items-stretch max-w-6xl mx-auto my-12 bg-white shadow-lg rounded-lg overflow-hidden">
       
-      {/* Map */}
+
       <div className="w-full md:w-1/2">
         <iframe
           title="Jarrow Hall Location"
@@ -15,25 +15,25 @@ const OfficeLocations = () => {
         ></iframe>
       </div>
 
-      {/* Info */}
-      <div className="w-full md:w-1/2 relative">
+    
+      <div className="w-full p-10 md:w-1/2 relative">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1581090700227-1e37b7c13d6a?auto=format&fit=crop&w=800&q=80')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-gray-900  "></div>
+        <div className="absolute inset-0 bg-gray-800  "></div>
 
         <div className="relative text-white p-8 flex flex-col justify-center h-full">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Main North East Office:</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-4">Main North East Office:</h2>
           <p className="flex items-center gap-2 text-sm md:text-base">
-            📍 9 Merchant Court, Monkton Business Park South, Hebburn, NE31 2EX
+           9 Merchant Court, Monkton Business Park South, Hebburn, NE31 2EX
           </p>
 
-          <h2 className="text-2xl md:text-3xl font-bold mt-6 mb-4">Satellite Office:</h2>
+          <h2 className="text-xl md:text-2xl font-bold mt-6 mb-4">Satellite Office:</h2>
           <p className="flex items-center gap-2 text-sm md:text-base">
-            📍 Unit 6 Business Village, Cramlington, NE23 1W
+             Unit 6 Business Village, Cramlington, NE23 1W
           </p>
         </div>
       </div>

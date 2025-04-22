@@ -15,6 +15,8 @@ import background from "../assets/background.png";
 import image1 from "../assets/image1.jfif";
 import image2 from "../assets/image2.jfif";
 import image3 from "../assets/image3.jfif";
+import image4 from "../assets/image4 (1).jpg";
+import image5 from "../assets/image5.jpg";
 import { motion } from "framer-motion";
 import {  useState } from "react";
 import read1 from "../assets/read1.jfif";
@@ -26,13 +28,10 @@ import mark2 from "../assets/mark3.jfif";
 import mark3 from "../assets/mark4.jfif";
 import mark4 from "../assets/mark5.jfif";
 import mark5 from "../assets/mark1.jfif";
-
-
 import "../styles/Home.css";
-
 import { Link } from "react-router-dom";
-
 import Marquee from "../components/Marquee";
+import { i } from "framer-motion/client";
 const cards = [
   {
     title: "Fortifying the Digital World",
@@ -40,6 +39,11 @@ const cards = [
       "Cybersecurity is the backbone of modern technology businesses and individuals from evolving online risks.",
     image: image1,
   },
+  { title: "Protecting Your Data",
+    description:
+      "We help organizations safeguard their data by implementing strong encryption and access controls.",
+    image: image4,
+  },
   {
     title: "Protecting Your Data",
     description:
@@ -50,55 +54,73 @@ const cards = [
     title: "Advanced Threat Detection",
     description:
       "Our cybersecurity framework includes AI-powered threat detection, real-time monitoring.",
-    image: image3,
+  
+     image: image3,
   },
-  {
-    title: "Protecting Your Data",
-    description:
-      "We help organizations safeguard their data by implementing strong encryption and access controls.",
-    image: image2,
-  },
+ 
   {
     title: "Advanced Threat Detection",
     description:
       "Our cybersecurity framework includes AI-powered threat detection, real-time monitoring.",
-    image: image3,
+    image: image5,
+  },
+];
+const cardData = [
+  {
+   
+    icon: "⚡️", 
+    title: "Rapid Attack Vectors Emerge",
+    description:
+      "Cyber threats evolve at breakneck speed, exploiting new vulnerabilities constantly. Attackers can infiltrate systems within hours, making immediate detection and response critical to mitigate damage.",
+  },
+  {
+
+     icon: "💸",
+    title: "Significant Financial Consequences",
+    description:
+      "Beyond direct recovery costs, breaches incur substantial expenses including legal fees, regulatory fines, reputational damage, and loss of customer trust, severely impacting long-term profitability.",
+  },
+  {
+  
+     icon: "🔒💔", 
+    title: "Loss of Data and Customer Trust",
+    description:
+      "A security incident can result in the irreversible loss of sensitive data and intellectual property. Rebuilding diminished customer and partner trust after a breach is a complex and lengthy process.",
   },
 ];
 const faqsData = [
   {
-    question: "What Is Security Scoring?",
+    question: "Why is cybersecurity important for my business?",
     answer:
-      "Microsoft security scoring is a carefully designed system that dives into your tenancy, devices, information governance and application control. Based on your tenancy setup and security settings we can give you a score. We aim to improve your score every month.",
+      "Cybersecurity protects your business from digital threats that can lead to data breaches, financial loss, reputational damage, and operational disruption. It's essential for maintaining trust and continuity in today's digital landscape.",
   },
   {
-    question: "I use Multi-Factor Authentication, is that enough?",
+    question: "How often should we update our security software?",
     answer:
-      "While Multi-Factor Authentication (MFA) significantly improves security, it should be combined with other best practices such as endpoint protection, regular security audits, and user training.",
+      "Security software, including antivirus, firewalls, and operating systems, should be updated as soon as new patches or versions are released. Regular updates are crucial to protect against the latest known vulnerabilities.",
   },
   {
-    question: "What are the biggest Cyber Security threats for SMBs right now?",
+    question: "What is ransomware and how can I protect against it?",
     answer:
-      "Some of the biggest cybersecurity threats for SMBs include phishing attacks, ransomware, insider threats, and weak password policies.",
+      "Ransomware is malicious software that encrypts your files, demanding payment to restore access. Protection involves regular data backups, employee training on phishing, and robust endpoint security solutions.",
   },
   {
-    question: "Do you offer Cyber Security training?",
+    question: "Are cloud services secure?",
     answer:
-      "Yes, we offer comprehensive cybersecurity training programs for businesses to help employees recognize and mitigate potential threats.",
+      "Cloud providers invest heavily in security, often more than individual businesses can. However, security is a shared responsibility. Your protection depends on both the provider's infrastructure security and your configuration and access management.",
   },
 ];
-
-
 const solutions = [
-  { title: "Cyber Security", image: solution1, icon: "🛡️" },
-  { title: "IT Support", image: solution2, icon: "👨‍💻" },
-  { title: "Hardware", image: solution3, icon: "🖥️" },
-  { title: "Cloud Services", image: solution4, icon: "☁️" },
+  { title: "Managed IT Services", image: solution1, icon: "📊" },
+  { title: "Data Backup & Recovery", image: solution2, icon: "💾" }, 
+  { title: "Network Solutions", image: solution3, icon: "🌐" }, 
+  { title: "VoIP & Communication", image: solution4, icon: "📞" }, 
 ];
+
 const articles = [
-  { title: "Windows 10 End Of Support", image: read1, link: "#" },
-  { title: "Windows 11: The Future Of Business ", image: read2, link: "#" },
-  { title: "Merry Christmas Everyone", image: read3, link: "#" },
+  { title: "The Importance of Cloud Security", image: read1, link: "#" },
+  { title: "5 Tips for Effective Remote Work", image: read2, link: "#" }, 
+  { title: "Understanding Ransomware Threats", image: read3, link: "#" },
 ];
 
 const logos = [mark1, mark2, mark3, mark4, mark5 , mark1, mark2, mark3, mark4, mark5 , mark1, mark2, mark3, mark4, mark5];
@@ -114,7 +136,7 @@ export default function Home() {
         <div className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white overflow-hidden">
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="absolute top-[20%] left-[5%] w-32 h-32 bg-blue-500 rounded-full opacity-30 blur-[120px]"></div>
-            <div className="absolute top-[50%] left-[40%] w-32 h-32 bg-blue-500 rounded-full opacity-30 blur-[120px]"></div>
+            <div className="absolute top-[50%] left-[10%] w-32 h-32 bg-blue-500 rounded-full opacity-30 blur-[120px]"></div>
             <div className="absolute bottom-[90%] right-[15%] w-32 h-32 bg-[#22D030] rounded-full opacity-30 blur-[120px]"></div>
           </div>
 
@@ -163,7 +185,7 @@ export default function Home() {
             <img src={vector} alt="lock" className="w-5 h-5" />
           </div>
           <div
-            className="absolute bottom-1/4 right-1/4 w-16 h-16 flex items-center justify-center bg-no-repeat bg-center bg-cover rounded-full "
+            className="absolute bottom-1/5 right-1/9 w-16 h-16 flex items-center justify-center bg-no-repeat bg-center bg-cover rounded-full "
             style={{ backgroundImage: `url(${circle})` }}
           >
             <img src={icon} alt="shield" className="w-5 h-5" />
@@ -252,30 +274,30 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Array(3)
-              .fill({
-                icon: "🔍",
-                title: "Threats Come From Every Angle",
-                description:
-                  "On average, it takes 277 days to identify and contain a security breach — and the impact is severe. The average cost of a breach in the U.S. is $4.35 million.*",
-              })
-              .map((item, index) => (
-                <div
-                  key={index}
-                  onClick={() => setSelected(index)}
-                  className={`relative bg-white text-black p-6 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 cursor-pointer overflow-hidden
-            ${selected === index ? "border-animation" : ""}`}
-                >
-                  <div className="text-3xl mb-4">{item.icon}</div>
-                  <h3 className="text-md md:text-lg font-bold">{item.title}</h3>
-                  <p className="text-gray-600 text-sm mt-2">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+          <div>
+     
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cardData.map((item, index) => (
+          <div
+            key={index}
+            onClick={() => setSelected(index)}
+            className={`relative bg-white text-black p-6 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2 cursor-pointer overflow-hidden
+            ${selected === index ? "border-animation" : ""} // Ensure 'border-animation' CSS class is defined elsewhere
+            `}
+          >
+           
+            <div className="text-3xl mb-4">{item.icon}</div>
+            <h3 className="text-md md:text-lg font-bold">{item.title}</h3>
+            <p className="text-gray-600 text-sm mt-2">
+              {item.description}
+            </p>
           </div>
+        ))}
+      </div>
+    </div>
+
         </div>
+     
         <div className="relative bg-black text-white text-center py-16 overflow-hidden mb-6">
           <div className="flex justify-center items-center mb-8 relative">
             <svg
@@ -308,25 +330,24 @@ export default function Home() {
           </div>
 
           <div className="relative z-10">
-            <p className="text-md py-1 text-gray-400">
-              Here to Guide You Through
-            </p>
-            <h2 className="text-xl font-semibold py-2">
-              We Are Your{" "}
-              <span className="bg-gray-200 text-black px-2 py-1 rounded">
-                Trusted Adviser
-              </span>
-            </h2>
-            <p className="text-gray-400 mt-2">
-              Our team works side-by-side with you as your cybersecurity
-              partner.
-            </p>
+  <p className="text-md py-1 text-gray-400">
+    Partnering for a Secure Future
+  </p>
+  <h2 className="text-xl font-semibold py-2">
+    Your Dedicated
+    <span className="bg-gray-200 text-black px-2 py-1 rounded ml-1"> 
+      Security Partner
+    </span>
+  </h2>
+  <p className="text-gray-400 mt-2">
+    We collaborate closely with your team, providing expert guidance and support to navigate the complexities of cybersecurity.
+  </p>
 
-            <button className="mt-6 mt-6 px-6 py-3 bg-gradient-to-r from-gray via-[#0F318E] to-gray hover:bg-blue-700 text-white text-lg font-semibold rounded-lg shadow-lg transition-all duration-300 relative z-10 text-white px-6 py-2 rounded  transition">
-              Why Guide Point?
-            </button>
-          </div>
-        </div>
+  <button className="mt-6 px-6 py-3 bg-gradient-to-r from-gray via-[#0F318E] to-gray hover:bg-blue-700 text-white text-lg font-semibold rounded-lg shadow-lg transition-all duration-300 relative z-10"> {/* Combined redundant classes */ }
+    Discover Our Approach
+  </button>
+</div>
+</div>
         <div className="absolute bottom-0 left-0 w-full">
           <svg
             className="w-full h-20"
@@ -341,8 +362,8 @@ export default function Home() {
 
     
       <FAQSection
-      title="You are only as strong as your weakest link, so make every link count."
-      subtitle="Your Questions, Answered."
+     title="Stay Ahead of Threats. Build a Resilient Defense."
+subtitle="Frequently Asked Questions"
       faqs={faqsData}
     />
     

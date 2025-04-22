@@ -45,8 +45,6 @@ export default function TalkToExpert() {
       setActionConfirmed(false);
       setMessage('');
       closeModal();
-
-      // Navigate to home or any page you want
       navigate('/');
     }, 2000);
   };
@@ -147,8 +145,8 @@ export default function TalkToExpert() {
             <div className="bg-[#0F318E] w-8 h-8 rounded mx-2"></div>
           </div>
           <h1 className="text-4xl font-bold mb-4">
-            Contact ITC Service – Expert IT Support &<br></br> Solutions
-          </h1>
+  Discover Tailored IT Solutions for Your<br></br> Business
+</h1>
         </div>
       </div>
 
@@ -253,9 +251,7 @@ export default function TalkToExpert() {
             <div className="mt-6 border p-6 rounded-lg shadow-md">
               <h3 className="text-lg font-semibold">Prefer to meet?</h3>
               <p className="text-gray-600">We’d love digital to help facilitate a face-to-face chat.</p>
-              <div className="w-full h-2 bg-gray-300 rounded-full overflow-hidden my-4">
-                  <div className="w-2/3 h-full bg-[#0F318E] rounded-full transition-all"></div>
-                </div>
+           
               
               <img src={expert2} alt="ITC Service" className="mx-auto mb-4" />
               <input
@@ -282,9 +278,12 @@ export default function TalkToExpert() {
                 <p className="text-xs">Dunston Park South, Hebburn, NE3 2X</p>
               </div>
             </div>
-            <div className="flex justify-between items-center pt-4">
+            <div className="flex justify-between items-center mt-4">
                 <span className="text-sm text-gray-600 font-semibold">Step 2 of 3</span>
-            </div>
+                <div className="w-1/3 h-2 bg-gray-300 rounded-full overflow-hidden">
+                  <div className="w-2/3 h-full bg-[#0F318E] rounded-full transition-all"></div>
+                </div>
+              </div>
             <div className="flex justify-between mt-6">
                 <button onClick={prevStep} className="bg-gray-500 text-white py-2 px-4 rounded">Previous</button>
                 <button type="button" onClick={nextStep} className="bg-[#0F318E] text-white py-2 px-4 rounded">Next</button>

@@ -7,10 +7,12 @@ import AboutUs from "./pages/AboutUs";
 import MeetOurTeam from "./pages/MeetOurTeam";
 import ContactUs from "./pages/ContactUs";
 import News from "./pages/News";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/talk-to-expert" element={<TalkToExpert />} />

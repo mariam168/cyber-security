@@ -7,8 +7,6 @@ import { IoIosArrowDown } from "react-icons/io";
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Define menu items and sub-menus
   const menuItems = [
     {
       name: "Services",
@@ -74,7 +72,7 @@ const Header = () => {
   }, [openDropdown]);
 
   return (
-    <header className="bg-black text-white px-6 py-3 flex items-center justify-between relative z-50">
+    <header className="bg-black sticky top-0 py-6  text-white px-6 py-3 flex items-center justify-between relative z-50">
       <Link to="/" className="text-2xl font-bold" onClick={closeAllMenus}>
         MARIOMA
       </Link>

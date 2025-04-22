@@ -9,23 +9,28 @@ import about2 from '../assets/read1.jfif';
 import about3 from '../assets/read2.jfif';
 import about4 from '../assets/read3.jfif';
 import mark1 from "../assets/mark1.jfif";
-import mark2 from "../assets/mark2.jfif";
+import mark2 from "../assets/mark4.jfif";
 import mark3 from "../assets/mark3.jfif";
 import mark4 from "../assets/mark4.jfif";
 import mark5 from "../assets/mark5.jfif";
 import Footer from "../components/Footer";
 import Team from "../components/Team";
 import person from "../assets/person.webp";
-import history1 from "../assets/history1.jfif";
-import history2 from "../assets/history2.jfif";
+import history1 from "../assets/history1 (1).jpg";
+import history2 from "../assets/history1 (2).jpg";
+import history3 from "../assets/history1 (3).jpg";
+
 import person1 from "../assets/person1.jfif";
-import person2 from "../assets/person2.jfif";
+import person2 from "../assets/person2.jpg";
 import person3 from "../assets/person3.jfif";
 import person4 from "../assets/person4.jfif";
 import * as THREE from 'three';
 
 export default function About() {
-  const logos = [mark1, mark2, mark3, mark4, mark5];
+  
+  
+  const logos = [mark1, mark2, mark3, mark4, mark5 , mark1, mark2, mark3, mark4, mark5 , mark1, mark2, mark3, mark4, mark5];
+  
   const teamMembersData = [
     { name: "John Doe", position: "CEO", image: about1 },
     { name: "Jane Smith", position: "CTO", image: about2 },
@@ -34,28 +39,28 @@ export default function About() {
   ];
   const timelineData = [
     {
-      year: "2006 - 2010",
+      year: "2010 - 2015",
       image: history1,
-      title: "The Early Years",
+      title: "Founding and Expansion",
       description:
-        "Established in Feb 2006, ITC Service was formed by Christopher Potts and Peter Anderson. Both with a background in IT, they decided to form a company to assist other SMEs with their IT requirements...",
+        "In 2010, the company expanded its services to include managed IT support, catering to a growing demand for proactive IT solutions. This marked a significant shift from traditional reactive IT services to strategic IT management.",
     },
     {
-      year: "2006 - 2010",
-      image: history1,
-      title: "The Early Years",
+      year: "2015 - 2020",
+      image: history2,
+      title: "Digital Transformation",
       description:
-        "Established in Feb 2006, ITC Service was formed by Christopher Potts and Peter Anderson. Both with a background in IT, they decided to form a company to assist other SMEs with their IT requirements...",
+        "Between 2015 and 2020, we embraced the digital transformation wave, integrating cloud services, cybersecurity, and modern IT solutions. This period saw ITC Service solidify its position as a trusted partner for SMEs across the region.",
     },
     {
-      year: "2006 - 2010",
-      image: history1,
-      title: "The Early Years",
+      year: "2020 - Present",
+      image: history3,
+      title: "A Future-Proof Approach",
       description:
-        "Established in Feb 2006, ITC Service was formed by Christopher Potts and Peter Anderson. Both with a background in IT, they decided to form a company to assist other SMEs with their IT requirements...",
+        "Since 2020, ITC Service has focused on future-proofing businesses with cutting-edge technology, including AI and advanced cybersecurity solutions. Our commitment to innovation continues to drive our mission of empowering businesses through technology.",
     },
-    
   ];
+  
   const teamMembers = [
     {
       name: "John Doe",
@@ -142,55 +147,47 @@ export default function About() {
             <div className="w-7 h-7 mx-1 bg-[#0F318E]  rounded shadow-md"></div>
           </div>
           <h2 className="text-2xl max-w-3xl sm:text-3xl md:text-4xl font-bold tracking-wide drop-shadow-md">
-            About ITC Service – <span className="text-blue-200">North East’s Award-Winning</span> Cybersecurity Solutions
-          </h2>
+  About Us – <span className="text-blue-200">North East’s Award-Winning</span> Cybersecurity Solutions
+</h2>
+
         </div>
       </div>
 
       <section className="py-16 px-6 md:px-20 text-center bg-white">
-        <p className="text-blue-500 font-semibold uppercase">Who We Are</p>
-        <h2 className="text-3xl md:text-4xl font-bold mt-2">
-          Our Cybersecurity Journey
-        </h2>
-        <p className="mt-6 text-gray-700 leading-relaxed max-w-3xl mx-auto">
-          From the early days of IT support, we've evolved to become a leader in cybersecurity.
-          We understand the growing threats and are dedicated to providing robust, reliable protection.
-          Our client-centered approach ensures your security needs are met with expertise and care.
-        </p>
-        <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl mx-auto">
-          Our ethos is built on transparency and reliability. We deliver powerful cybersecurity solutions
-          without overwhelming you with technical jargon. We treat every client's business uniquely,
-          providing tailored security strategies.
-        </p>
-        <div className="mt-10 bg-gray-100 p-6 md:p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
-          <p className="text-gray-800 italic text-lg">
-            "Our mission is to safeguard your digital assets with cutting-edge cybersecurity solutions.
-            We strive to provide the best security services, ensuring your peace of mind."
-          </p>
-          <div className="mt-6 flex items-center justify-center">
-            <img
-              src={person}
-              alt="Christopher Potts"
-              className="w-10 h-12 rounded-full mr-4"
-            />
-            <div className="text-left">
-              <p className="text-black font-bold">Christopher Potts</p>
-              <p className="text-gray-500 text-sm">Technical Director</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <p className="text-blue-500 font-semibold uppercase">About Us</p>
+  <h2 className="text-3xl md:text-4xl font-bold mt-2">
+    Our Cybersecurity Commitment
+  </h2>
+  <p className="mt-6 text-gray-700 leading-relaxed max-w-3xl mx-auto">
+    From humble beginnings in IT support to becoming industry leaders in cybersecurity, we’ve always been committed to adapting to the ever-evolving digital landscape. Our team combines innovative strategies with years of expertise to deliver comprehensive protection for your business.
+  </p>
+ 
+  <div className="mt-10 bg-gray-100 p-6 md:p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+    <p className="text-gray-800 italic text-lg">
+      "At the heart of our mission is the commitment to protect your organization through forward-thinking cybersecurity solutions, allowing you to focus on growth with confidence."
+    </p>
+    <div className="mt-6 flex items-center justify-center">
+      <img
+        src={person} 
+        alt="Jane Doe"
+        className="w-10 h-12 rounded-full mr-4"
+      />
+      <div className="text-left">
+        <p className="text-black font-bold">Jane Doe</p>
+        <p className="text-gray-500 text-sm">Founder & CEO</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <section className="md:px-20 px-5 bg-white relative">
-  <div className="max-w-5xl mx-auto relative">
 
-    {/* Vertical Line (Only visible on md and up) */}
+<section className="md:px-20 px-5 bg-white relative">
+  <div className="max-w-6xl mx-auto relative">
+
     <div className="hidden md:block absolute top-0 left-1/2 w-1 h-full bg-gradient-to-b from-[#0F318E] to-[#1E90FF] transform -translate-x-1/2"></div>
 
     {timelineData.map((item, index) => (
       <div key={index} className="flex flex-col md:flex-row items-center mb-12 relative">
-        
-        {/* Timeline Marker + Icon (Only on md and up) */}
         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 flex-col items-center">
           <div className="w-8 h-8 bg-[#0F318E] border-4 border-white rounded-full relative z-10 shadow-lg"></div>
           <div className="bg-[#0F318E] text-white p-4 rounded-full shadow-xl mt-2 m-4">
@@ -198,7 +195,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Content */}
         <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:pr-10" : "md:pl-10"} mt-6 md:mt-0`}>
           <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-[#0F318E] text-center">{item.title}</h3>
@@ -206,8 +202,8 @@ export default function About() {
           </div>
         </div>
 
-        {/* Image */}
-        <div className="w-full md:w-1/2 mt-6 md:mt-0">
+        <div className="w-full md:w-1/2 mt-6 md:mt-0 pl-10 relative">
+          <div className="absolute inset-0 bg-black opacity-40 rounded-lg md:ml-10"></div>
           <img
             src={item.image}
             alt={item.title}
@@ -219,6 +215,7 @@ export default function About() {
     ))}
   </div>
 </section>
+
 
 
       <Team title="Our Cybersecurity Team" teamMembers={teamMembers} />

@@ -23,7 +23,7 @@ export default function ContactUs() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Contact Us
+        Get in Touch
       </motion.h2>
 
       <div className="grid md:grid-cols-2 gap-8 w-full max-w-5xl">
@@ -36,19 +36,19 @@ export default function ContactUs() {
         >
           <div className="flex items-center gap-3 text-gray-700">
             <FaMapMarkerAlt className="text-red-500 text-xl" />
-            <p>123 Street, City, Country</p>
+            <p>25 Silicon Avenue, Tech City, UK</p>
           </div>
           <div className="flex items-center gap-3 text-gray-700">
             <FaPhoneAlt className="text-green-500 text-xl" />
-            <p>+123 456 789</p>
+            <p>+44 20 7946 0958</p>
           </div>
           <div className="flex items-center gap-3 text-gray-700">
             <FaEnvelope className="text-blue-500 text-xl" />
-            <p>contact@example.com</p>
+            <p>support@techflow.co.uk</p>
           </div>
           <iframe
             className="w-full h-64 rounded-lg mt-4"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509387!2d144.9537353156488!3d-37.816279742021204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1640495923686!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19800.308002902936!2d-0.12775859999999998!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3333e0673f%3A0xf9359ab0a875886b!2sLondon!5e0!3m2!1sen!2suk!4v1713772593993!5m2!1sen!2suk"
             allowFullScreen=""
             loading="lazy"
           ></iframe>
