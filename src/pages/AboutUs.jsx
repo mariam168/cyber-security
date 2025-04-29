@@ -161,7 +161,7 @@ export default function About() {
     }, []); 
     return (
         <div className="bg-gray-950 text-gray-300 overflow-hidden font-sans relative"> 
-            <Header />
+          
             <section className="relative w-full h-[90vh] flex flex-col justify-center items-center text-white overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <canvas ref={canvasRef} className="w-full h-full block"></canvas>
@@ -378,7 +378,7 @@ export default function About() {
              </section>
 
 
-            <Footer />
+      
         </div>
     );
 }

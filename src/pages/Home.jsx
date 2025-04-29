@@ -131,7 +131,7 @@ export default function Home() {
   
   return (
     <div>
-      <Header />
+   
       <div>
         <div className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white overflow-hidden">
           <div className="absolute inset-0 flex justify-center items-center">
@@ -400,7 +400,7 @@ subtitle="Frequently Asked Questions"
     <div>
       <Marquee images={logos} speed={12} />
     </div>
-      <Footer />
+     
     </div>
   );
 }

@@ -63,7 +63,7 @@ export default function IT() {
 
   return (
     <div>
-      <Header />
+   
       <HeroSection
         title="IT Support That Empowers Growth"
         subtitle="IT downtime costs UK businesses an average of £3.7 million a year. "
@@ -164,7 +164,7 @@ export default function IT() {
         )}
       />
 
-      <Footer />
+   
     </div>
   );
 }

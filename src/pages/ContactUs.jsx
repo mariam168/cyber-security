@@ -11,33 +11,21 @@ export default function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Replace with your actual form submission logic (e.g., API call)
     console.log("Form Submitted", formData);
-    alert("Message sent!"); // Simple confirmation
-    setFormData({ name: "", email: "", message: "" }); // Clear form
+    alert("Message sent!"); 
+    setFormData({ name: "", email: "", message: "" }); 
   };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-gray-200 p-6 relative overflow-hidden">
-      {/* Background representing Cyber Security (Darker, more abstract) */}
       <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
-        {/* Dark overlay with subtle texture */}
         <div className="absolute inset-0 bg-black opacity-60"></div>
-
-        {/* Glowing nodes and lines - using blues and purples */}
         <div className="absolute top-1/4 left-1/4 w-24 h-24 bg-blue-600 opacity-20 rounded-full mix-blend-screen animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-purple-600 opacity-20 rounded-full mix-blend-screen animate-pulse delay-200"></div>
-        {/* Changed green node to cyan */}
         <div className="absolute top-10 right-10 w-16 h-16 bg-cyan-500 opacity-20 rounded-full mix-blend-screen animate-pulse delay-400"></div>
-
-        {/* Connecting Lines (simulated) - using blues and purples */}
         <div className="absolute top-[28%] left-[35%] w-40 h-0.5 bg-blue-500 opacity-30 rotate-45"></div>
         <div className="absolute bottom-[28%] right-[35%] w-40 h-0.5 bg-purple-500 opacity-30 -rotate-45"></div>
-         {/* Changed green line to cyan */}
         <div className="absolute top-[8%] right-[12%] w-32 h-0.5 bg-cyan-500 opacity-30 rotate-90"></div>
-
-        {/* Abstract grid/pattern overlay (more subtle) */}
-         {/* Keeping the subtle blue grid */}
          <div className="absolute inset-0 grid grid-cols-10 gap-1 opacity-5 pointer-events-none">
              {[...Array(100)].map((_, i) => (
                  <div key={i} className="w-px h-full bg-blue-300 mx-auto"></div>
@@ -81,51 +69,44 @@ export default function ContactUs() {
                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500 to-transparent opacity-5 rotate-45 scale-150"></div>
                  <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-cyan-500 to-transparent opacity-5 rotate-45 scale-150"></div>
             </div>
-
-
-            {/* Content needs z-index above the internal background elements */}
             <h3 className="text-2xl font-semibold text-white border-b border-[#0F318E]/50 pb-4 relative z-10">Contact Nodes</h3> {/* Renamed title */}
 
             <div className="flex items-start gap-4 text-gray-300 relative z-10">
                 <FaMapMarkerAlt className="text-blue-400 text-2xl mt-1" />
                 <div>
-                    <p className="font-semibold">Operational Base</p> {/* Renamed */}
-                    <p>Sector 123, Node 456</p> {/* Renamed */}
-                    <p>Digital Grid, Region Alpha</p> {/* Renamed */}
-                    <p>Cyberspace</p> {/* Renamed */}
+                    <p className="font-semibold">Operational Base</p> 
+                    <p>Sector 123, Node 456</p> 
+                    <p>Digital Grid, Region Alpha</p> 
+                    <p>Cyberspace</p>
                 </div>
             </div>
 
              <div className="flex items-center gap-4 text-gray-300 relative z-10">
-                {/* Changed icon color from green to cyan */}
                 <FaPhoneAlt className="text-cyan-400 text-2xl" />
                 <div>
-                    <p className="font-semibold">Encrypted Channel</p> {/* Renamed */}
-                    <p>+1 (555) [SEC] [URE]</p> {/* Changed number for theme */}
+                    <p className="font-semibold">Encrypted Channel</p>
+                    <p>+1 (555) [SEC] [URE]</p> 
                 </div>
             </div>
 
              <div className="flex items-center gap-4 text-gray-300 relative z-10">
                 <FaEnvelope className="text-purple-400 text-2xl" />
                 <div>
-                     <p className="font-semibold">Secure Uplink</p> {/* Renamed */}
-                    <p>secure.contact[@]yourcybercompany.com</p> {/* Renamed */}
+                     <p className="font-semibold">Secure Uplink</p>
+                    <p>secure.contact[@]yourcybercompany.com</p>
                 </div>
             </div>
 
-            {/* Added a security icon element - changed red to orange for contrast if desired, or cyan */}
+           
              <div className="flex items-center gap-4 text-gray-300 relative z-10">
-                {/* Changed icon color from red to orange for contrast */}
                 <FaFingerprint className="text-orange-400 text-2xl" />
                 <div>
-                     <p className="font-semibold">Verification Required</p> {/* Renamed */}
-                    <p>Your identity is protected.</p> {/* Changed text */}
+                     <p className="font-semibold">Verification Required</p> 
+                    <p>Your identity is protected.</p> 
                 </div>
             </div>
 
         </div>
-
-        {/* Contact Form */}
         <div className="w-full md:w-1/2">
           <motion.form
             className="bg-gray-900 p-8 shadow-inner rounded-lg flex flex-col gap-6 border border-[#0F318E]/50" 

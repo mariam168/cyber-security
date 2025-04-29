@@ -84,7 +84,7 @@ const borderAccentCyan = 'border-cyan-300';
 const WorkWithUs = () => {
   return (
     <div className="bg-white text-gray-800 overflow-hidden"> 
-      <Header />
+
       <section className="w-full relative">
         <div className="relative w-full h-[450px] md:h-[600px] overflow-hidden"> 
           <motion.img
@@ -325,8 +325,6 @@ const WorkWithUs = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
