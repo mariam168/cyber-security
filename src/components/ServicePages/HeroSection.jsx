@@ -1,8 +1,8 @@
 import { useRef } from "react"; 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import FeatureBox from "./FeatureBox";
-import Button from "./Button";
+import FeatureBox from "../FeatureBox";
+import Button from "../Button";
 
 
 const CyberGrid = () => {
