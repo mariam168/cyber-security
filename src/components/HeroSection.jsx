@@ -1,9 +1,9 @@
-import { useRef } from "react"; // Removed useState, useEffect as 'animate' wasn't used
+import { useRef } from "react"; 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import FeatureBox from "./FeatureBox";
 import Button from "./Button";
-import * as THREE from "three";
+
 
 const CyberGrid = () => {
   const gridRef = useRef(null);
@@ -34,7 +34,7 @@ const HeroSection = ({ title, subtitle, features, buttonText, onButtonClick }) =
   
   return (
  
-    <div className="relative h-[100vh] sm:h-[75vh] md:h-[80vh] lg:h-[70vh] flex flex-col justify-center text-white overflow-hidden bg-black">
+    <div className="relative h-[100vh] sm:h-[85vh] md:h-[80vh] lg:h-[80vh] flex flex-col justify-center text-white overflow-hidden bg-black">
   
       <Canvas camera={{ position: [0, 0, 7] }}>
         <ambientLight intensity={0.3} />
@@ -72,3 +72,5 @@ const HeroSection = ({ title, subtitle, features, buttonText, onButtonClick }) =
 };
 
 export default HeroSection;
+
+

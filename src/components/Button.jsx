@@ -1,13 +1,11 @@
-const Button = ({ text, onClick, bgColor = "bg-[#0F318E]", hoverColor = "hover:bg-[#22D030]" }) => {
-    return (
-      <button
-        onClick={onClick}
-        className={`mt-6 ${bgColor} px-6 py-3 rounded-lg font-semibold text-white ${hoverColor} transition`}
-      >
-        {text} →
-      </button>
-    );
-  };
-  
-  export default Button;
-  
+import React from 'react';
+const Button = ({ text, onClick, className = "" }) => (
+  <button
+    onClick={onClick}
+    className={`px-6 py-2 sm:px-8 sm:py-3 rounded-lg font-semibold text-white transition-all duration-300 ease-in-out shadow-md hover:shadow-lg hover:brightness-110 ${className}`}
+  >
+    {text}
+  </button>
+);
+
+export default Button;

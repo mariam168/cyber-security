@@ -12,7 +12,6 @@ const VideoHeroSection = ({
 
   return (
     <div className="relative overflow-hidden min-h-[80vh]" style={{ backgroundColor: bgGradient }}>
-      {/* Video Background */}
       <div className="absolute inset-0">
         <iframe
           className={`w-full h-full transition-opacity duration-700 ease-in-out ${isLoaded ? "opacity-100" : "opacity-0"}`}
@@ -26,10 +25,8 @@ const VideoHeroSection = ({
         />
       </div>
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0F318E]/90 via-black/50 to-black/10 backdrop-blur-sm" />
 
-      {/* Waves */}
       <svg className="absolute top-0 w-full" viewBox="0 0 1440 320">
         <path fill="url(#topGradient)" fillOpacity="0.4" d="M0,64L48,80C96,96,192,128,288,138.7C384,149,480,139,576,138.7C672,139,768,149,864,149.3C960,149,1056,139,1152,117.3C1248,96,1344,64,1392,48L1440,32L1440,0L0,0Z"/>
         <defs>
@@ -49,8 +46,6 @@ const VideoHeroSection = ({
           </linearGradient>
         </defs>
       </svg>
-
-      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 sm:py-28 lg:py-32 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 text-white backdrop-blur-md bg-white/10 p-8 rounded-2xl shadow-lg">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">

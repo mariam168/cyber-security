@@ -1,12 +1,7 @@
 import Header from "../components/Header";
-import Marquee from "../components/Marquee";
-import it from "../assets/it2.jpg";
-import google from "../assets/google.jfif";
-import cyber from "../assets/cyber.jfif";
 import Northern from "../assets/Nourthern.jfif";
 import Elevator from "../assets/Elevator.jfif";
 import HeroSection from "../components/HeroSection";
-import InfoSection from "../components/InfoSection";
 import mark1 from "../assets/mark1.jfif";
 import mark2 from "../assets/mark4.jfif";
 import mark3 from "../assets/mark3.jfif";
@@ -15,7 +10,7 @@ import mark5 from "../assets/mark5.jfif";
 import ITSupportSection from "../components/ITSupportSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import VideoHeroSection from "../components/VideoHeroSection";
-import { FaRegLightbulb , FaNetworkWired,FaDatabase } from "react-icons/fa";
+import { FaRegLightbulb, FaNetworkWired, FaDatabase } from "react-icons/fa";
 import read1 from "../assets/read1.jfif";
 import read2 from "../assets/read2.jfif";
 import read3 from "../assets/read3.jfif";
@@ -62,9 +57,9 @@ const articles = [
 ];
 
 export default function IT() {
-  
-  const logos = [mark1, mark2, mark3, mark4, mark5 , mark1, mark2, mark3, mark4, mark5 , mark1, mark2, mark3, mark4, mark5];
-  
+
+  const logos = [mark1, mark2, mark3, mark4, mark5, mark1, mark2, mark3, mark4, mark5, mark1, mark2, mark3, mark4, mark5];
+
 
   return (
     <div>
@@ -80,22 +75,6 @@ export default function IT() {
         buttonText="Start Today"
         onButtonClick={() => console.log("Start Today button clicked!")}
       />
-      <Marquee images={logos} speed={12} />
-      {/* <InfoSection
-      title="Strategic IT Support for Growing Businesses"
-      description="our team provides expert, tailored support designed for small and medium-sized enterprises. We work closely with you to implement smart, scalable solutions that align with your goals — ensuring your technology is always working for you, not against you."
-      images={[
-          { src: cyber, alt: "Cyber Essentials Plus" },
-          {
-            src: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-            alt: "Microsoft Partner",
-          },
-          { src: google, alt: "Google Reviews" },
-        ]}
-        mainImage={it}
-        reverse={false}
-      /> */}
-    
 
       <TestimonialsSection
         title="Don't just take our word for it:"
@@ -130,44 +109,44 @@ export default function IT() {
           ],
         }}
       />
-       <ITSupportSection
-  title="Reliable"
-  subtitle="Tech Services"
-  description="From one-time consultations to long-term partnerships, our team delivers innovative, scalable tech solutions tailored to your unique business needs."
-  tabs={[
-    {
-      name: "IT Consulting",
-      icon: <FaRegLightbulb size={20} />,
-      content: "Strategic guidance to help align your technology with business goals.",
-    },
-    {
-      name: "Network Solutions",
-      icon: <FaNetworkWired size={20} />,
-      content: "Robust networking services to keep your systems connected and efficient.",
-    },
-    {
-      name: "Data Backup",
-      icon: <FaDatabase size={20} />,
-      content: "Reliable data protection and recovery plans to secure your information.",
-    },
-  ]}
-/>
+      <ITSupportSection
+        title="Reliable"
+        subtitle="Tech Services"
+        description="From one-time consultations to long-term partnerships, our team delivers innovative, scalable tech solutions tailored to your unique business needs."
+        tabs={[
+          {
+            name: "IT Consulting",
+            icon: <FaRegLightbulb size={20} />,
+            content: "Strategic guidance to help align your technology with business goals.",
+          },
+          {
+            name: "Network Solutions",
+            icon: <FaNetworkWired size={20} />,
+            content: "Robust networking services to keep your systems connected and efficient.",
+          },
+          {
+            name: "Data Backup",
+            icon: <FaDatabase size={20} />,
+            content: "Reliable data protection and recovery plans to secure your information.",
+          },
+        ]}
+      />
       <VideoHeroSection
-       title="IT That’s Powerful—Not Wasteful"
-       subtitle="Sustainable by Design"
-       description=" Service, we’re committed to building a greener future. Inspired by our Technical Director’s vision, we’re on a mission to achieve full carbon neutrality by 2025—delivering cutting-edge IT solutions with minimal environmental impact."
+        title="IT That’s Powerful—Not Wasteful"
+        subtitle="Sustainable by Design"
+        description=" Service, we’re committed to building a greener future. Inspired by our Technical Director’s vision, we’re on a mission to achieve full carbon neutrality by 2025—delivering cutting-edge IT solutions with minimal environmental impact."
         videoUrl="https://www.youtube.com/embed/TCjaZXRa2No"
         imageUrl="https://cdn-icons-png.flaticon.com/512/3063/3063456.png"
         bgGradient="black"
         btnText="Read More"
         btnLink="#"
       />
-       <FAQSection
-      title="You are only as strong as your weakest link, so make every link count."
-      subtitle="Your Questions, Answered."
-      faqs={faqsData}
-    />
-    
+      <FAQSection
+        title="You are only as strong as your weakest link, so make every link count."
+        subtitle="Your Questions, Answered."
+        faqs={faqsData}
+      />
+
       <SolutionSlider solutions={solutions} />
 
 
@@ -184,8 +163,8 @@ export default function IT() {
           </div>
         )}
       />
-    
-    <Footer />
+
+      <Footer />
     </div>
   );
 }
