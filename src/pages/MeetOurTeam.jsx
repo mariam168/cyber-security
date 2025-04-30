@@ -336,7 +336,7 @@ export default function TeamPage() {
       </section>
 
       <Marquee images={logos} speed={60} />
-      <Footer />
+   
       <style jsx global>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }

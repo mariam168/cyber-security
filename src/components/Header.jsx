@@ -110,9 +110,11 @@ const Header = () => {
 
       <div className="hidden md:flex items-center space-x-4">
         <FaSearch className="cursor-pointer hover:text-blue-400 transition-colors duration-200" size={20} />
-        <button className="bg-gradient-to-r from-[#0F318E] to-[#22D030] text-white px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition-opacity duration-200">
-          Report An Incident
+        <Link to = "./autho">
+         <button className="bg-gradient-to-r from-[#0F318E] to-[#22D030] text-white px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition-opacity duration-200">
+          Get Started
         </button>
+        </Link>
       </div>
 
   
@@ -204,9 +206,11 @@ const Header = () => {
           ))}
 
           <div className="mt-6 pt-6 border-t border-gray-700">
+            <Link to = "./autho">
             <button className="w-full bg-gradient-to-r from-[#0F318E] to-[#22D030] text-white px-4 py-3 rounded-md text-base font-medium hover:opacity-90 transition-opacity duration-200">
-              Report An Incident
+              Get Started
             </button>
+            </Link>
           </div>
         </div>
       )}

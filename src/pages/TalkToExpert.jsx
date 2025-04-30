@@ -2,7 +2,6 @@
 import { useState } from "react";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
 import expert from "../assets/solution3.jfif";
 import expert2 from "../assets/expert.jpg";
 import SchedulingStep from '../components/SchedulingStep'; 
@@ -131,8 +130,7 @@ export default function TalkToExpert() {
 
   return (
     <div>
-      <Header />
-   
+      
       <div
         className="relative h-[60vh] bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${expert})`, backgroundPosition: "center center" }}
@@ -151,16 +149,16 @@ export default function TalkToExpert() {
       </div>
 
   
-      <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg mt-8 rounded-lg">
+      <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg my-8 rounded-lg">
 
         {step === 1 && (
           <>
-            <h2 className="text-2xl font-bold text-center">Let's Chat!</h2>
+            <h2 className="text-2xl text-[#0F318E] font-bold text-center">Let's Chat!</h2>
             <p className="text-center text-gray-600 mb-6">
               We’re here to help you unlock your business’s IT potential. Fill in the form
               below and a member of our team will be in touch within 24 hours.
             </p>
-            <form className="space-y-6 bg-white p-6 shadow-lg rounded-lg">
+            <form className="space-y-6 bg-white p-6 shadow-lg rounded-lg ">
            
                <div className="grid grid-cols-2 gap-6">
                 <div>

@@ -1,4 +1,3 @@
-/** @jsxImportSource react */
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import TalkToExpert from "./pages/TalkToExpert";
@@ -9,6 +8,7 @@ import ContactUs from "./pages/ContactUs";
 import News from "./pages/News";
 import ScrollToTop from "./components/ScrollToTop";
 import Layout from "./components/Layout";
+import Autho from "./pages/Autho";
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="news" element={<News />} />
         </Route>
+        <Route path="/autho" element={<Autho />} />
       </Routes>
     </Router>
   );
